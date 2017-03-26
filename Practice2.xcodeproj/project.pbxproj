@@ -13,6 +13,11 @@
 		E803FF461E872425002CEBC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E803FF451E872425002CEBC2 /* Assets.xcassets */; };
 		E803FF491E872425002CEBC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E803FF471E872425002CEBC2 /* LaunchScreen.storyboard */; };
 		E803FF641E873385002CEBC2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E803FF631E873385002CEBC2 /* AVFoundation.framework */; };
+		E8488CB31E88778800BC0E9E /* TimePitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8488CB21E88778800BC0E9E /* TimePitchViewController.swift */; };
+		E8488CB51E8877AB00BC0E9E /* ScrollingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8488CB41E8877AB00BC0E9E /* ScrollingViewController.swift */; };
+		E8488CB71E887ADA00BC0E9E /* MixerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8488CB61E887ADA00BC0E9E /* MixerViewController.swift */; };
+		E8488CBB1E88815B00BC0E9E /* PlaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8488CB91E88815B00BC0E9E /* PlaybackViewController.swift */; };
+		E8488CBC1E88815B00BC0E9E /* SeekingAudioPlayerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8488CBA1E88815B00BC0E9E /* SeekingAudioPlayerNode.swift */; };
 		E8B0BE981E87547E002A0159 /* SongsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B0BE971E87547E002A0159 /* SongsTableViewController.swift */; };
 		E8B0BEBE1E8765AB002A0159 /* 01 It'll Take a Long Time.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEA31E8765AB002A0159 /* 01 It'll Take a Long Time.m4a */; };
 		E8B0BEBF1E8765AB002A0159 /* 01 Out On the Weekend.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEA41E8765AB002A0159 /* 01 Out On the Weekend.m4a */; };
@@ -65,6 +70,11 @@
 		E803FF481E872425002CEBC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E803FF4A1E872425002CEBC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E803FF631E873385002CEBC2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E8488CB21E88778800BC0E9E /* TimePitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePitchViewController.swift; sourceTree = "<group>"; };
+		E8488CB41E8877AB00BC0E9E /* ScrollingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingViewController.swift; sourceTree = "<group>"; };
+		E8488CB61E887ADA00BC0E9E /* MixerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixerViewController.swift; sourceTree = "<group>"; };
+		E8488CB91E88815B00BC0E9E /* PlaybackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackViewController.swift; sourceTree = "<group>"; };
+		E8488CBA1E88815B00BC0E9E /* SeekingAudioPlayerNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeekingAudioPlayerNode.swift; sourceTree = "<group>"; };
 		E8B0BE971E87547E002A0159 /* SongsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsTableViewController.swift; sourceTree = "<group>"; };
 		E8B0BEA31E8765AB002A0159 /* 01 It'll Take a Long Time.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "01 It'll Take a Long Time.m4a"; path = "Audio/01 It'll Take a Long Time.m4a"; sourceTree = "<group>"; };
 		E8B0BEA41E8765AB002A0159 /* 01 Out On the Weekend.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "01 Out On the Weekend.m4a"; path = "Audio/01 Out On the Weekend.m4a"; sourceTree = "<group>"; };
@@ -129,9 +139,10 @@
 			children = (
 				E8B0BEA01E87623C002A0159 /* Audio */,
 				E803FF3E1E872425002CEBC2 /* AppDelegate.swift */,
-				E803FF401E872425002CEBC2 /* ViewController.swift */,
-				E8B0BE971E87547E002A0159 /* SongsTableViewController.swift */,
+				E8488CBA1E88815B00BC0E9E /* SeekingAudioPlayerNode.swift */,
+				E8488CB81E887D5B00BC0E9E /* ViewControllers */,
 				E803FF421E872425002CEBC2 /* Main.storyboard */,
+				E8B0BE971E87547E002A0159 /* SongsTableViewController.swift */,
 				E803FF451E872425002CEBC2 /* Assets.xcassets */,
 				E803FF471E872425002CEBC2 /* LaunchScreen.storyboard */,
 				E803FF4A1E872425002CEBC2 /* Info.plist */,
@@ -145,6 +156,18 @@
 				E803FF631E873385002CEBC2 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8488CB81E887D5B00BC0E9E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E8488CB61E887ADA00BC0E9E /* MixerViewController.swift */,
+				E8488CB91E88815B00BC0E9E /* PlaybackViewController.swift */,
+				E8488CB41E8877AB00BC0E9E /* ScrollingViewController.swift */,
+				E8488CB21E88778800BC0E9E /* TimePitchViewController.swift */,
+				E803FF401E872425002CEBC2 /* ViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		E8B0BEA01E87623C002A0159 /* Audio */ = {
@@ -282,8 +305,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8488CB31E88778800BC0E9E /* TimePitchViewController.swift in Sources */,
 				E8B0BE981E87547E002A0159 /* SongsTableViewController.swift in Sources */,
+				E8488CBC1E88815B00BC0E9E /* SeekingAudioPlayerNode.swift in Sources */,
+				E8488CB71E887ADA00BC0E9E /* MixerViewController.swift in Sources */,
 				E803FF411E872425002CEBC2 /* ViewController.swift in Sources */,
+				E8488CB51E8877AB00BC0E9E /* ScrollingViewController.swift in Sources */,
+				E8488CBB1E88815B00BC0E9E /* PlaybackViewController.swift in Sources */,
 				E803FF3F1E872425002CEBC2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

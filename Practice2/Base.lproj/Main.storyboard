@@ -21,127 +21,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTj-Xm-5rX">
-                                <rect key="frame" x="55" y="104" width="33" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Play!"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U0h-ow-iW7">
+                                <rect key="frame" x="16" y="20" width="343" height="176"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <action selector="playAudio" destination="BYZ-38-t0r" eventType="touchUpInside" id="LHb-jp-ii2"/>
+                                    <segue destination="zo7-8d-ZYg" kind="embed" identifier="EmbedPlaybackVC" id="KNC-Rz-x1W"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cor-r0-l4M">
-                                <rect key="frame" x="274" y="104" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Pause!"/>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="868-WQ-DNi">
+                                <rect key="frame" x="16" y="388" width="343" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <action selector="pauseAudio" destination="BYZ-38-t0r" eventType="touchUpInside" id="BB9-fw-bgY"/>
+                                    <segue destination="Xax-ST-jAG" kind="embed" identifier="EmbedScrollingVC" id="2av-BR-e9W"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6P-zc-In0">
-                                <rect key="frame" x="236" y="414" width="99" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Scroll Forward"/>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nP5-t1-fHf">
+                                <rect key="frame" x="16" y="222" width="343" height="145"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <action selector="scrollForward" destination="BYZ-38-t0r" eventType="touchUpInside" id="bWr-BA-mmu"/>
+                                    <segue destination="6bl-IV-aq3" kind="embed" identifier="EmbedTimePitchVC" id="mof-PO-c7o"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22i-iR-EcZ">
-                                <rect key="frame" x="55" y="414" width="77" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Scroll Back"/>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3oE-Jw-lCF">
+                                <rect key="frame" x="16" y="535" width="343" height="112"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <action selector="scrollBack" destination="BYZ-38-t0r" eventType="touchUpInside" id="RnR-21-10g"/>
+                                    <segue destination="CFh-vW-c1o" kind="embed" id="lOf-VW-QTg"/>
                                 </connections>
-                            </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="ePK-e3-Sbh">
-                                <rect key="frame" x="55" y="477" width="291" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="1 sec"/>
-                                    <segment title="2 sec"/>
-                                    <segment title="4 sec"/>
-                                    <segment title="6 sec"/>
-                                    <segment title="8 sec"/>
-                                    <segment title="10 sec"/>
-                                </segments>
-                            </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPa-Kr-Zjw">
-                                <rect key="frame" x="162" y="138" width="50" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Restart"/>
-                                <connections>
-                                    <action selector="restartAudio" destination="BYZ-38-t0r" eventType="touchUpInside" id="5gb-91-wVD"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Steps: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Nk-qa-VBX">
-                                <rect key="frame" x="61" y="304" width="151" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-20" maximumValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="71E-X9-O1I">
-                                <rect key="frame" x="241" y="300" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="changeSpeed" destination="BYZ-38-t0r" eventType="valueChanged" id="fu3-hr-uSj"/>
-                                </connections>
-                            </stepper>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7A-e8-5hC">
-                                <rect key="frame" x="139" y="190" width="93" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Change Song"/>
-                                <connections>
-                                    <segue destination="iOm-fF-nXZ" kind="presentation" id="H8Z-14-EKr"/>
-                                </connections>
-                            </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GkM-RN-cXb">
-                                <rect key="frame" x="16" y="534" width="343" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Normal"/>
-                                    <segment title="Left"/>
-                                    <segment title="Right"/>
-                                    <segment title="Cancelled"/>
-                                </segments>
-                                <connections>
-                                    <action selector="applyPhase" destination="BYZ-38-t0r" eventType="valueChanged" id="Mry-WC-nof"/>
-                                </connections>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6wN-B1-Bjw">
-                                <rect key="frame" x="55" y="345" width="291" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="NORMAL"/>
-                                    <segment title="SLOWED"/>
-                                    <segment title="NO PITCH"/>
-                                </segments>
-                                <connections>
-                                    <action selector="changeSpeed" destination="BYZ-38-t0r" eventType="valueChanged" id="XNF-Un-ILD"/>
-                                </connections>
-                            </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[current song]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fg8-Gj-K5j">
-                                <rect key="frame" x="25" y="37" width="321" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <connections>
-                        <outlet property="currentSongLabel" destination="fg8-Gj-K5j" id="a9c-dr-ybB"/>
-                        <outlet property="mixSegmentedSelector" destination="GkM-RN-cXb" id="TGV-Xy-PrM"/>
-                        <outlet property="segmentedScrollSelector" destination="ePK-e3-Sbh" id="O23-pd-W21"/>
-                        <outlet property="speedSegmentedControl" destination="6wN-B1-Bjw" id="ILl-hq-Ka8"/>
-                        <outlet property="speedStepper" destination="71E-X9-O1I" id="8yS-2t-xsr"/>
-                        <outlet property="stepLabel" destination="1Nk-qa-VBX" id="9Hm-hI-TnE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+            <point key="canvasLocation" x="-980" y="-396.25187406296857"/>
         </scene>
         <!--Songs Table View Controller-->
         <scene sceneID="HnJ-N1-k4J">
@@ -159,7 +73,191 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OCh-as-r9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="873" y="124"/>
+            <point key="canvasLocation" x="905" y="-653"/>
+        </scene>
+        <!--Playback View Controller-->
+        <scene sceneID="t95-Ju-jkz">
+            <objects>
+                <viewController id="zo7-8d-ZYg" customClass="PlaybackViewController" customModule="Practice2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9xo-T1-44l">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="176"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTj-Xm-5rX">
+                                <rect key="frame" x="16" y="39" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play!"/>
+                                <connections>
+                                    <action selector="play" destination="zo7-8d-ZYg" eventType="touchUpInside" id="qzj-VO-oBk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cor-r0-l4M">
+                                <rect key="frame" x="281" y="39" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pause!"/>
+                                <connections>
+                                    <action selector="pause" destination="zo7-8d-ZYg" eventType="touchUpInside" id="cet-kn-G4R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPa-Kr-Zjw">
+                                <rect key="frame" x="146" y="39" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="restart" destination="zo7-8d-ZYg" eventType="touchUpInside" id="1r2-1J-nx4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[current song]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fg8-Gj-K5j">
+                                <rect key="frame" x="9" y="10" width="321" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7A-e8-5hC">
+                                <rect key="frame" x="125" y="90" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Change Song"/>
+                                <connections>
+                                    <segue destination="iOm-fF-nXZ" kind="presentation" identifier="PresentSongsTable" id="iEA-w0-GaR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="currentSongLabel" destination="fg8-Gj-K5j" id="fyd-NT-85z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lfi-25-Nuk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="-622"/>
+        </scene>
+        <!--Scrolling View Controller-->
+        <scene sceneID="4ex-wc-xwX">
+            <objects>
+                <viewController id="Xax-ST-jAG" customClass="ScrollingViewController" customModule="Practice2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YeI-Iq-zqX">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6P-zc-In0">
+                                <rect key="frame" x="218" y="27" width="99" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scroll Forward"/>
+                                <connections>
+                                    <action selector="scrollForward" destination="Xax-ST-jAG" eventType="touchUpInside" id="pA4-Hq-PP0"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="ePK-e3-Sbh">
+                                <rect key="frame" x="26" y="80" width="291" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="1 sec"/>
+                                    <segment title="2 sec"/>
+                                    <segment title="4 sec"/>
+                                    <segment title="6 sec"/>
+                                    <segment title="8 sec"/>
+                                    <segment title="10 sec"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22i-iR-EcZ">
+                                <rect key="frame" x="26" y="27" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scroll Back"/>
+                                <connections>
+                                    <action selector="scrollBack" destination="Xax-ST-jAG" eventType="touchUpInside" id="R2W-Of-OAk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollSecondsSelector" destination="ePK-e3-Sbh" id="Ydb-Bv-7AC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ENN-A7-Arn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="-440"/>
+        </scene>
+        <!--Time Pitch View Controller-->
+        <scene sceneID="txg-Ht-0Bf">
+            <objects>
+                <viewController id="6bl-IV-aq3" customClass="TimePitchViewController" customModule="Practice2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i5J-5Z-wTH">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="145"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-20" maximumValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="71E-X9-O1I">
+                                <rect key="frame" x="223" y="24" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="changeSpeed" destination="6bl-IV-aq3" eventType="valueChanged" id="1PN-eZ-x7Q"/>
+                                </connections>
+                            </stepper>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6wN-B1-Bjw">
+                                <rect key="frame" x="26" y="97" width="291" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="NORMAL"/>
+                                    <segment title="SLOWED"/>
+                                    <segment title="NO PITCH"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeSpeed" destination="6bl-IV-aq3" eventType="valueChanged" id="vya-j1-6N6"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Steps: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Nk-qa-VBX">
+                                <rect key="frame" x="16" y="28" width="151" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="speedModeSelector" destination="6wN-B1-Bjw" id="hpu-Rr-g5I"/>
+                        <outlet property="speedStepper" destination="71E-X9-O1I" id="xMQ-78-EVa"/>
+                        <outlet property="stepsLabel" destination="1Nk-qa-VBX" id="gwO-gD-nn8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xh7-w4-TLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="-279"/>
+        </scene>
+        <!--Mixer View Controller-->
+        <scene sceneID="ejZ-hP-Xhh">
+            <objects>
+                <viewController id="CFh-vW-c1o" customClass="MixerViewController" customModule="Practice2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dM4-bD-UUb">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GkM-RN-cXb">
+                                <rect key="frame" x="16" y="48" width="311" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Normal"/>
+                                    <segment title="Left"/>
+                                    <segment title="Right"/>
+                                    <segment title="Cancelled"/>
+                                </segments>
+                                <connections>
+                                    <action selector="updateMixingMode" destination="CFh-vW-c1o" eventType="valueChanged" id="XOX-pW-9Q0"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="mixingModeSelector" destination="GkM-RN-cXb" id="Neq-il-A4U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37b-f5-H2G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="-100.74962518740631"/>
         </scene>
     </scenes>
 </document>
