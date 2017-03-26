@@ -14,6 +14,7 @@ class ViewController: UIViewController {
 
     var audioFilePlayer: AVPlayer?
     
+    @IBOutlet weak var currentSongLabel: UILabel!
     // For playback speed adjustment
     @IBOutlet weak var speedStepper: UIStepper!
     @IBOutlet weak var stepLabel: UILabel!
@@ -32,6 +33,7 @@ class ViewController: UIViewController {
     }
     
     func selectSong(_ audioFilePath: String) {
+        currentSongLabel.text = audioFilePath.components(separatedBy: "/").last!
         print(audioFilePath)
         let audioFileURL = URL(fileURLWithPath: audioFilePath)
         self.audioFilePlayer = AVPlayer(url: audioFileURL)

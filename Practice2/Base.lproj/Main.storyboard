@@ -120,10 +120,18 @@
                                     <action selector="changeSpeed" destination="BYZ-38-t0r" eventType="valueChanged" id="XNF-Un-ILD"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[current song]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fg8-Gj-K5j">
+                                <rect key="frame" x="25" y="37" width="321" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="currentSongLabel" destination="fg8-Gj-K5j" id="a9c-dr-ybB"/>
                         <outlet property="mixSegmentedSelector" destination="GkM-RN-cXb" id="TGV-Xy-PrM"/>
                         <outlet property="segmentedScrollSelector" destination="ePK-e3-Sbh" id="O23-pd-W21"/>
                         <outlet property="speedSegmentedControl" destination="6wN-B1-Bjw" id="ILl-hq-Ka8"/>
