@@ -17,9 +17,7 @@ class ViewController: UIViewController {
     // For playback speed adjustment
     @IBOutlet weak var speedStepper: UIStepper!
     @IBOutlet weak var stepLabel: UILabel!
-    @IBOutlet weak var speedModeButton: UIButton!
-    var speedMode = "NORMAL"
-    
+    @IBOutlet weak var speedSegmentedControl: UISegmentedControl!
     // For jumping back/forward
     @IBOutlet weak var segmentedScrollSelector: UISegmentedControl!
 
@@ -41,7 +39,6 @@ class ViewController: UIViewController {
     
     func draw() {
         self.stepLabel.text = "Steps: \(self.speedStepper.value)"
-        self.speedModeButton.setTitle(self.speedMode, for: .normal)
     }
     
     // Start and stop audio
@@ -63,7 +60,7 @@ class ViewController: UIViewController {
     // Adjust playback speed
     @IBAction func changeSpeed() {
         var rate = 0.0
-        if speedMode == "NORMAL" {
+        if self.speedSegmentedControl.selectedSegmentIndex == 0 {
             rate = 1.0
         } else {
             let numSteps = self.speedStepper.value
@@ -71,29 +68,16 @@ class ViewController: UIViewController {
         }
 
         self.audioFilePlayer!.rate = Float(rate)
-        self.draw()
-    }
-
-    @IBAction func togglePitchCorrection() {
-        let currentAlgorithm = self.audioFilePlayer!.currentItem!.audioTimePitchAlgorithm
-        if currentAlgorithm == AVAudioTimePitchAlgorithmVarispeed {
-            self.audioFilePlayer!.currentItem!.audioTimePitchAlgorithm = AVAudioTimePitchAlgorithmSpectral
-        } else {
+        
+        if self.speedSegmentedControl.selectedSegmentIndex == 2 {
             self.audioFilePlayer!.currentItem!.audioTimePitchAlgorithm = AVAudioTimePitchAlgorithmVarispeed
-        }
-    }
-
-    @IBAction func toggleSpeedMode() {
-        if speedMode == "NORMAL" {
-            self.speedMode = "ADJUSTED"
         } else {
-            self.speedMode = "NORMAL"
+            self.audioFilePlayer!.currentItem!.audioTimePitchAlgorithm = AVAudioTimePitchAlgorithmSpectral
         }
-        self.changeSpeed()
+
         self.draw()
     }
-    
-    
+
     // Scrolling audio
     @IBAction func scrollBack() {
         scroll(-1.0)
