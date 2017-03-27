@@ -9,20 +9,12 @@
 import AVFoundation
 import Foundation
 
-class SeekingAudioPlayerNode {
-    let audioEngine = AVAudioEngine()
+class AudioPlaybackNode {
     let audioPlayerNode = AVAudioPlayerNode()
-    var audioFile: AVAudioFile?
-    var audioFileStartFrame = AVAudioFramePosition(0)
     let timePitchNode = AVAudioUnitTimePitch()
 
-    func attach() {
-        audioEngine.attach(audioPlayerNode)
-        audioEngine.attach(timePitchNode)
-        audioEngine.connect(audioPlayerNode, to: timePitchNode, format: nil)
-        audioEngine.connect(timePitchNode, to: audioEngine.mainMixerNode, format: nil)
-        try! audioEngine.start()
-    }
+    var audioFile: AVAudioFile?
+    var audioFileStartFrame = AVAudioFramePosition(0)
 
     func selectSong(audioFileURL: URL) {
         try! self.audioFile = AVAudioFile(forReading: audioFileURL)
@@ -51,6 +43,10 @@ class SeekingAudioPlayerNode {
     }
 
     func pause() {
+        if !self.audioPlayerNode.isPlaying {
+            return
+        }
+
         audioFileStartFrame = currentFramePosition()
         audioPlayerNode.stop()
     }

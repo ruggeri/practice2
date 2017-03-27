@@ -10,17 +10,17 @@ import Foundation
 import UIKit
 
 class ScrollingViewController: UIViewController {
-    var audioPlayerNode: SeekingAudioPlayerNode?
+    var audioPlaybackNode: AudioPlaybackNode?
 
     @IBOutlet weak var scrollSecondsSelector: UISegmentedControl!
 
     // Functions to scroll backward/forward
     @IBAction func scrollBack() {
-        audioPlayerNode!.scroll(sign: -1.0, secondsToStep: secondsToStep())
+        audioPlaybackNode!.scroll(sign: -1.0, secondsToStep: secondsToStep())
     }
 
     @IBAction func scrollForward() {
-        audioPlayerNode!.scroll(sign: +1.0, secondsToStep: secondsToStep())
+        audioPlaybackNode!.scroll(sign: +1.0, secondsToStep: secondsToStep())
     }
 
     func secondsToStep() -> Double {

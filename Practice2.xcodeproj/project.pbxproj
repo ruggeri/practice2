@@ -17,7 +17,9 @@
 		E8488CB51E8877AB00BC0E9E /* ScrollingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8488CB41E8877AB00BC0E9E /* ScrollingViewController.swift */; };
 		E8488CB71E887ADA00BC0E9E /* MixerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8488CB61E887ADA00BC0E9E /* MixerViewController.swift */; };
 		E8488CBB1E88815B00BC0E9E /* PlaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8488CB91E88815B00BC0E9E /* PlaybackViewController.swift */; };
-		E8488CBC1E88815B00BC0E9E /* SeekingAudioPlayerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8488CBA1E88815B00BC0E9E /* SeekingAudioPlayerNode.swift */; };
+		E8488CBC1E88815B00BC0E9E /* AudioPlaybackNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8488CBA1E88815B00BC0E9E /* AudioPlaybackNode.swift */; };
+		E8488CBE1E88A88C00BC0E9E /* ChannelMixerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8488CBD1E88A88C00BC0E9E /* ChannelMixerNode.swift */; };
+		E8488CC01E88AA1E00BC0E9E /* AudioGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8488CBF1E88AA1E00BC0E9E /* AudioGraph.swift */; };
 		E8B0BE981E87547E002A0159 /* SongsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B0BE971E87547E002A0159 /* SongsTableViewController.swift */; };
 		E8B0BEBE1E8765AB002A0159 /* 01 It'll Take a Long Time.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEA31E8765AB002A0159 /* 01 It'll Take a Long Time.m4a */; };
 		E8B0BEBF1E8765AB002A0159 /* 01 Out On the Weekend.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEA41E8765AB002A0159 /* 01 Out On the Weekend.m4a */; };
@@ -74,7 +76,9 @@
 		E8488CB41E8877AB00BC0E9E /* ScrollingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingViewController.swift; sourceTree = "<group>"; };
 		E8488CB61E887ADA00BC0E9E /* MixerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixerViewController.swift; sourceTree = "<group>"; };
 		E8488CB91E88815B00BC0E9E /* PlaybackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackViewController.swift; sourceTree = "<group>"; };
-		E8488CBA1E88815B00BC0E9E /* SeekingAudioPlayerNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeekingAudioPlayerNode.swift; sourceTree = "<group>"; };
+		E8488CBA1E88815B00BC0E9E /* AudioPlaybackNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlaybackNode.swift; sourceTree = "<group>"; };
+		E8488CBD1E88A88C00BC0E9E /* ChannelMixerNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelMixerNode.swift; sourceTree = "<group>"; };
+		E8488CBF1E88AA1E00BC0E9E /* AudioGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioGraph.swift; sourceTree = "<group>"; };
 		E8B0BE971E87547E002A0159 /* SongsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsTableViewController.swift; sourceTree = "<group>"; };
 		E8B0BEA31E8765AB002A0159 /* 01 It'll Take a Long Time.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "01 It'll Take a Long Time.m4a"; path = "Audio/01 It'll Take a Long Time.m4a"; sourceTree = "<group>"; };
 		E8B0BEA41E8765AB002A0159 /* 01 Out On the Weekend.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "01 Out On the Weekend.m4a"; path = "Audio/01 Out On the Weekend.m4a"; sourceTree = "<group>"; };
@@ -139,7 +143,9 @@
 			children = (
 				E8B0BEA01E87623C002A0159 /* Audio */,
 				E803FF3E1E872425002CEBC2 /* AppDelegate.swift */,
-				E8488CBA1E88815B00BC0E9E /* SeekingAudioPlayerNode.swift */,
+				E8488CBF1E88AA1E00BC0E9E /* AudioGraph.swift */,
+				E8488CBA1E88815B00BC0E9E /* AudioPlaybackNode.swift */,
+				E8488CBD1E88A88C00BC0E9E /* ChannelMixerNode.swift */,
 				E8488CB81E887D5B00BC0E9E /* ViewControllers */,
 				E803FF421E872425002CEBC2 /* Main.storyboard */,
 				E8B0BE971E87547E002A0159 /* SongsTableViewController.swift */,
@@ -306,9 +312,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8488CB31E88778800BC0E9E /* TimePitchViewController.swift in Sources */,
+				E8488CBE1E88A88C00BC0E9E /* ChannelMixerNode.swift in Sources */,
 				E8B0BE981E87547E002A0159 /* SongsTableViewController.swift in Sources */,
-				E8488CBC1E88815B00BC0E9E /* SeekingAudioPlayerNode.swift in Sources */,
+				E8488CBC1E88815B00BC0E9E /* AudioPlaybackNode.swift in Sources */,
 				E8488CB71E887ADA00BC0E9E /* MixerViewController.swift in Sources */,
+				E8488CC01E88AA1E00BC0E9E /* AudioGraph.swift in Sources */,
 				E803FF411E872425002CEBC2 /* ViewController.swift in Sources */,
 				E8488CB51E8877AB00BC0E9E /* ScrollingViewController.swift in Sources */,
 				E8488CBB1E88815B00BC0E9E /* PlaybackViewController.swift in Sources */,

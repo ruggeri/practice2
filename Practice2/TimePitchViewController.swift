@@ -12,7 +12,7 @@ import UIKit
 class TimePitchViewController: UIViewController {
     let STEP_SIZE = pow(2.0, 1.0 / 12.0)
 
-    var audioPlayerNode: SeekingAudioPlayerNode?
+    var audioPlaybackNode: AudioPlaybackNode?
 
     @IBOutlet weak var speedModeSelector: UISegmentedControl!
     @IBOutlet weak var speedStepper: UIStepper!
@@ -24,13 +24,13 @@ class TimePitchViewController: UIViewController {
 
         switch speedModeSelector.selectedSegmentIndex {
         case 0:
-            audioPlayerNode!.changeSpeed(playbackRate: 1.0, pitchShiftCents: 0.0)
+            audioPlaybackNode!.changeSpeed(playbackRate: 1.0, pitchShiftCents: 0.0)
         case 1:
-            audioPlayerNode!.changeSpeed(playbackRate: playbackRate, pitchShiftCents: 0.0)
+            audioPlaybackNode!.changeSpeed(playbackRate: playbackRate, pitchShiftCents: 0.0)
         case 2:
-            audioPlayerNode!.changeSpeed(playbackRate: playbackRate, pitchShiftCents: numSteps * 100.0)
+            audioPlaybackNode!.changeSpeed(playbackRate: playbackRate, pitchShiftCents: numSteps * 100.0)
         default:
-            print("WTF?")
+            print("Invalid speed selection?")
         }
 
         draw()

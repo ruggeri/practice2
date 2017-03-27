@@ -46,7 +46,7 @@
                                 <rect key="frame" x="16" y="535" width="343" height="112"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="CFh-vW-c1o" kind="embed" id="lOf-VW-QTg"/>
+                                    <segue destination="CFh-vW-c1o" kind="embed" identifier="EmbedMixerVC" id="lOf-VW-QTg"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -79,6 +79,10 @@
         <scene sceneID="t95-Ju-jkz">
             <objects>
                 <viewController id="zo7-8d-ZYg" customClass="PlaybackViewController" customModule="Practice2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G93-1f-dN7"/>
+                        <viewControllerLayoutGuide type="bottom" id="bEW-IY-B19"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9xo-T1-44l">
                         <rect key="frame" x="0.0" y="0.0" width="343" height="176"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,6 +141,10 @@
         <scene sceneID="4ex-wc-xwX">
             <objects>
                 <viewController id="Xax-ST-jAG" customClass="ScrollingViewController" customModule="Practice2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KY1-Jm-G9J"/>
+                        <viewControllerLayoutGuide type="bottom" id="SBD-Tq-Ech"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YeI-Iq-zqX">
                         <rect key="frame" x="0.0" y="0.0" width="343" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,6 +192,10 @@
         <scene sceneID="txg-Ht-0Bf">
             <objects>
                 <viewController id="6bl-IV-aq3" customClass="TimePitchViewController" customModule="Practice2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JRc-Q4-jqP"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Oe-ba-3CG"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="i5J-5Z-wTH">
                         <rect key="frame" x="0.0" y="0.0" width="343" height="145"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,6 +243,10 @@
         <scene sceneID="ejZ-hP-Xhh">
             <objects>
                 <viewController id="CFh-vW-c1o" customClass="MixerViewController" customModule="Practice2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lLR-u7-Ns9"/>
+                        <viewControllerLayoutGuide type="bottom" id="hHX-tn-IWz"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dM4-bD-UUb">
                         <rect key="frame" x="0.0" y="0.0" width="343" height="112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
