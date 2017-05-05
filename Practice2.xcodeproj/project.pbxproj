@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8030A541EBD0B3200057106 /* 03 I Will Be There.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E8030A531EBD0B3200057106 /* 03 I Will Be There.m4a */; };
 		E803FF3F1E872425002CEBC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E803FF3E1E872425002CEBC2 /* AppDelegate.swift */; };
 		E803FF411E872425002CEBC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E803FF401E872425002CEBC2 /* ViewController.swift */; };
 		E803FF441E872425002CEBC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E803FF421E872425002CEBC2 /* Main.storyboard */; };
@@ -64,6 +65,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E8030A531EBD0B3200057106 /* 03 I Will Be There.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "03 I Will Be There.m4a"; path = "Audio/03 I Will Be There.m4a"; sourceTree = "<group>"; };
 		E803FF3B1E872424002CEBC2 /* Practice2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practice2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E803FF3E1E872425002CEBC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E803FF401E872425002CEBC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		E8B0BEA01E87623C002A0159 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				E8030A531EBD0B3200057106 /* 03 I Will Be There.m4a */,
 				E8B0BEA31E8765AB002A0159 /* 01 It'll Take a Long Time.m4a */,
 				E8B0BEA41E8765AB002A0159 /* 01 Out On the Weekend.m4a */,
 				E8B0BEA51E8765AB002A0159 /* 02 Friend Of The Devil.mp3 */,
@@ -294,6 +297,7 @@
 				E8B0BEBE1E8765AB002A0159 /* 01 It'll Take a Long Time.m4a in Resources */,
 				E8B0BEC21E8765AB002A0159 /* 02 High Time.mp3 in Resources */,
 				E8B0BED21E8765AB002A0159 /* 19 Apology.mp3 in Resources */,
+				E8030A541EBD0B3200057106 /* 03 I Will Be There.m4a in Resources */,
 				E8B0BECF1E8765AB002A0159 /* 07 Willin'.mp3 in Resources */,
 				E8B0BEC61E8765AB002A0159 /* 02 Thrasher.m4a in Resources */,
 				E8B0BED01E8765AB002A0159 /* 09 Keep Me From Blowing Away.mp3 in Resources */,
