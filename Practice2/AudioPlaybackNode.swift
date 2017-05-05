@@ -15,18 +15,19 @@ class AudioPlaybackNode {
 
     var audioFile: AVAudioFile?
     var audioFileStartFrame = AVAudioFramePosition(0)
+    
+    // Because this information is only available when playing, we will have to save it when pausing...
+    var audioFileCurrentFramePosition: AVAudioFramePosition?
+    var audioFileCurrentSampleRate: Double?
 
     func selectSong(audioFileURL: URL) {
         try! self.audioFile = AVAudioFile(forReading: audioFileURL)
     }
 
-    // Start and stop audio
+    // Start playing audio
     func play() {
-        if audioPlayerNode.isPlaying {
-            return
-        }
-
         audioPlayerNode.stop()
+
         audioPlayerNode.scheduleSegment(
             audioFile!,
             startingFrame: AVAudioFramePosition(audioFileStartFrame),
@@ -38,16 +39,20 @@ class AudioPlaybackNode {
 
     func restart() {
         audioFileStartFrame = AVAudioFramePosition(0)
-        audioPlayerNode.stop()
         play()
     }
 
     func pause() {
         if !self.audioPlayerNode.isPlaying {
+            print("pause(): not playing?")
             return
         }
 
         audioFileStartFrame = currentFramePosition()
+        // Hack to force this information to be saved
+        currentFramePosition()
+        sampleRate()
+
         audioPlayerNode.stop()
     }
 
@@ -59,7 +64,6 @@ class AudioPlaybackNode {
         )
         audioFileStartFrame = AVAudioFramePosition(min(max(newStartFramePosition, 0), Int(audioFile!.length)))
 
-        audioPlayerNode.stop()
         play()
     }
 
@@ -71,18 +75,34 @@ class AudioPlaybackNode {
 
     // Helpers
     func currentFramePosition() -> AVAudioFramePosition {
+        // Since this info is only available when playing; use last recorded value when paused.
+        if !self.audioPlayerNode.isPlaying {
+            return audioFileCurrentFramePosition!
+        }
+
         let sampleTime = audioPlayerNode.playerTime(
             forNodeTime: audioPlayerNode.lastRenderTime!
         )!.sampleTime
 
-        return AVAudioFramePosition(
+        let framePosition = AVAudioFramePosition(
             Int(audioFileStartFrame) + Int(sampleTime)
         )
+        
+        audioFileCurrentFramePosition = framePosition
+        return framePosition
     }
     
     func sampleRate() -> Double {
-        return audioPlayerNode.playerTime(
+        // Since this info is only available when playing; use last recorded value when paused.
+        if !self.audioPlayerNode.isPlaying {
+            return audioFileCurrentSampleRate!
+        }
+
+        let sampleRate = audioPlayerNode.playerTime(
             forNodeTime: audioPlayerNode.lastRenderTime!
         )!.sampleRate
+        
+        audioFileCurrentSampleRate = sampleRate
+        return sampleRate
     }
 }
