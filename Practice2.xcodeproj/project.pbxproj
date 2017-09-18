@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E8030A541EBD0B3200057106 /* 03 I Will Be There.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E8030A531EBD0B3200057106 /* 03 I Will Be There.m4a */; };
 		E803FF3F1E872425002CEBC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E803FF3E1E872425002CEBC2 /* AppDelegate.swift */; };
 		E803FF411E872425002CEBC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E803FF401E872425002CEBC2 /* ViewController.swift */; };
 		E803FF441E872425002CEBC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E803FF421E872425002CEBC2 /* Main.storyboard */; };
@@ -22,33 +21,8 @@
 		E8488CBE1E88A88C00BC0E9E /* ChannelMixerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8488CBD1E88A88C00BC0E9E /* ChannelMixerNode.swift */; };
 		E8488CC01E88AA1E00BC0E9E /* AudioGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8488CBF1E88AA1E00BC0E9E /* AudioGraph.swift */; };
 		E8B0BE981E87547E002A0159 /* SongsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B0BE971E87547E002A0159 /* SongsTableViewController.swift */; };
-		E8B0BEBE1E8765AB002A0159 /* 01 It'll Take a Long Time.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEA31E8765AB002A0159 /* 01 It'll Take a Long Time.m4a */; };
-		E8B0BEBF1E8765AB002A0159 /* 01 Out On the Weekend.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEA41E8765AB002A0159 /* 01 Out On the Weekend.m4a */; };
-		E8B0BEC01E8765AB002A0159 /* 02 Friend Of The Devil.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEA51E8765AB002A0159 /* 02 Friend Of The Devil.mp3 */; };
-		E8B0BEC11E8765AB002A0159 /* 02 Helplessly Hoping.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEA61E8765AB002A0159 /* 02 Helplessly Hoping.mp3 */; };
-		E8B0BEC21E8765AB002A0159 /* 02 High Time.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEA71E8765AB002A0159 /* 02 High Time.mp3 */; };
-		E8B0BEC31E8765AB002A0159 /* 02 Love in Vain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEA81E8765AB002A0159 /* 02 Love in Vain.mp3 */; };
-		E8B0BEC41E8765AB002A0159 /* 02 No Expectations.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEA91E8765AB002A0159 /* 02 No Expectations.mp3 */; };
-		E8B0BEC51E8765AB002A0159 /* 02 Nobody Knows You When You're Down and Out.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEAA1E8765AB002A0159 /* 02 Nobody Knows You When You're Down and Out.mp3 */; };
-		E8B0BEC61E8765AB002A0159 /* 02 Thrasher.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEAB1E8765AB002A0159 /* 02 Thrasher.m4a */; };
-		E8B0BEC71E8765AB002A0159 /* 02 Walking On a Wire.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEAC1E8765AB002A0159 /* 02 Walking On a Wire.m4a */; };
-		E8B0BEC81E8765AB002A0159 /* 03 America.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEAD1E8765AB002A0159 /* 03 America.mp3 */; };
-		E8B0BEC91E8765AB002A0159 /* 03 Lady Jane.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEAE1E8765AB002A0159 /* 03 Lady Jane.mp3 */; };
-		E8B0BECA1E8765AB002A0159 /* 04 Just the Motion.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEAF1E8765AB002A0159 /* 04 Just the Motion.m4a */; };
-		E8B0BECB1E8765AB002A0159 /* 04 Someday Soon.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEB01E8765AB002A0159 /* 04 Someday Soon.m4a */; };
-		E8B0BECC1E8765AB002A0159 /* 04 Tomorrow Is a Long Time.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEB11E8765AB002A0159 /* 04 Tomorrow Is a Long Time.m4a */; };
-		E8B0BECD1E8765AB002A0159 /* 05 I Am Yours.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEB21E8765AB002A0159 /* 05 I Am Yours.mp3 */; };
-		E8B0BECE1E8765AB002A0159 /* 06 Ripple.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEB31E8765AB002A0159 /* 06 Ripple.mp3 */; };
-		E8B0BECF1E8765AB002A0159 /* 07 Willin'.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEB41E8765AB002A0159 /* 07 Willin'.mp3 */; };
-		E8B0BED01E8765AB002A0159 /* 09 Keep Me From Blowing Away.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEB51E8765AB002A0159 /* 09 Keep Me From Blowing Away.mp3 */; };
-		E8B0BED11E8765AB002A0159 /* 13 Just a Season.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEB61E8765AB002A0159 /* 13 Just a Season.mp3 */; };
-		E8B0BED21E8765AB002A0159 /* 19 Apology.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEB71E8765AB002A0159 /* 19 Apology.mp3 */; };
-		E8B0BED31E8765AB002A0159 /* cant_find_my_way_home.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEB81E8765AB002A0159 /* cant_find_my_way_home.mp3 */; };
-		E8B0BED41E8765AB002A0159 /* Crazy Arms (Live).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEB91E8765AB002A0159 /* Crazy Arms (Live).mp3 */; };
-		E8B0BED51E8765AB002A0159 /* Driving Wheel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEBA1E8765AB002A0159 /* Driving Wheel.mp3 */; };
-		E8B0BED61E8765AB002A0159 /* Four Strong Winds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEBB1E8765AB002A0159 /* Four Strong Winds.mp3 */; };
-		E8B0BED71E8765AB002A0159 /* No Regrets.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEBC1E8765AB002A0159 /* No Regrets.mp3 */; };
-		E8B0BED81E8765AB002A0159 /* Pink Noise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8B0BEBD1E8765AB002A0159 /* Pink Noise.mp3 */; };
+		E8DE314F1F6F5FC50009BABB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8DE314E1F6F5FC50009BABB /* MediaPlayer.framework */; };
+		E8DE31511F6F623E0009BABB /* MediaPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE31501F6F623D0009BABB /* MediaPickerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -109,6 +83,8 @@
 		E8B0BEBB1E8765AB002A0159 /* Four Strong Winds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Four Strong Winds.mp3"; path = "Audio/Four Strong Winds.mp3"; sourceTree = "<group>"; };
 		E8B0BEBC1E8765AB002A0159 /* No Regrets.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "No Regrets.mp3"; path = "Audio/No Regrets.mp3"; sourceTree = "<group>"; };
 		E8B0BEBD1E8765AB002A0159 /* Pink Noise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Pink Noise.mp3"; path = "Audio/Pink Noise.mp3"; sourceTree = "<group>"; };
+		E8DE314E1F6F5FC50009BABB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		E8DE31501F6F623D0009BABB /* MediaPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPickerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8DE314F1F6F5FC50009BABB /* MediaPlayer.framework in Frameworks */,
 				E803FF641E873385002CEBC2 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +138,7 @@
 		E803FF581E873258002CEBC2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E8DE314E1F6F5FC50009BABB /* MediaPlayer.framework */,
 				E803FF631E873385002CEBC2 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
@@ -174,6 +152,7 @@
 				E8488CB41E8877AB00BC0E9E /* ScrollingViewController.swift */,
 				E8488CB21E88778800BC0E9E /* TimePitchViewController.swift */,
 				E803FF401E872425002CEBC2 /* ViewController.swift */,
+				E8DE31501F6F623D0009BABB /* MediaPickerController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -274,37 +253,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8B0BEC41E8765AB002A0159 /* 02 No Expectations.mp3 in Resources */,
-				E8B0BED11E8765AB002A0159 /* 13 Just a Season.mp3 in Resources */,
-				E8B0BED81E8765AB002A0159 /* Pink Noise.mp3 in Resources */,
-				E8B0BED71E8765AB002A0159 /* No Regrets.mp3 in Resources */,
-				E8B0BECD1E8765AB002A0159 /* 05 I Am Yours.mp3 in Resources */,
-				E8B0BEC11E8765AB002A0159 /* 02 Helplessly Hoping.mp3 in Resources */,
 				E803FF491E872425002CEBC2 /* LaunchScreen.storyboard in Resources */,
-				E8B0BED31E8765AB002A0159 /* cant_find_my_way_home.mp3 in Resources */,
-				E8B0BED41E8765AB002A0159 /* Crazy Arms (Live).mp3 in Resources */,
-				E8B0BEC81E8765AB002A0159 /* 03 America.mp3 in Resources */,
 				E803FF461E872425002CEBC2 /* Assets.xcassets in Resources */,
-				E8B0BEC01E8765AB002A0159 /* 02 Friend Of The Devil.mp3 in Resources */,
-				E8B0BEC51E8765AB002A0159 /* 02 Nobody Knows You When You're Down and Out.mp3 in Resources */,
-				E8B0BECC1E8765AB002A0159 /* 04 Tomorrow Is a Long Time.m4a in Resources */,
-				E8B0BED51E8765AB002A0159 /* Driving Wheel.mp3 in Resources */,
-				E8B0BECA1E8765AB002A0159 /* 04 Just the Motion.m4a in Resources */,
-				E8B0BECB1E8765AB002A0159 /* 04 Someday Soon.m4a in Resources */,
-				E8B0BEBF1E8765AB002A0159 /* 01 Out On the Weekend.m4a in Resources */,
 				E803FF441E872425002CEBC2 /* Main.storyboard in Resources */,
-				E8B0BEC91E8765AB002A0159 /* 03 Lady Jane.mp3 in Resources */,
-				E8B0BEBE1E8765AB002A0159 /* 01 It'll Take a Long Time.m4a in Resources */,
-				E8B0BEC21E8765AB002A0159 /* 02 High Time.mp3 in Resources */,
-				E8B0BED21E8765AB002A0159 /* 19 Apology.mp3 in Resources */,
-				E8030A541EBD0B3200057106 /* 03 I Will Be There.m4a in Resources */,
-				E8B0BECF1E8765AB002A0159 /* 07 Willin'.mp3 in Resources */,
-				E8B0BEC61E8765AB002A0159 /* 02 Thrasher.m4a in Resources */,
-				E8B0BED01E8765AB002A0159 /* 09 Keep Me From Blowing Away.mp3 in Resources */,
-				E8B0BECE1E8765AB002A0159 /* 06 Ripple.mp3 in Resources */,
-				E8B0BED61E8765AB002A0159 /* Four Strong Winds.mp3 in Resources */,
-				E8B0BEC31E8765AB002A0159 /* 02 Love in Vain.mp3 in Resources */,
-				E8B0BEC71E8765AB002A0159 /* 02 Walking On a Wire.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +269,7 @@
 				E8488CB31E88778800BC0E9E /* TimePitchViewController.swift in Sources */,
 				E8488CBE1E88A88C00BC0E9E /* ChannelMixerNode.swift in Sources */,
 				E8B0BE981E87547E002A0159 /* SongsTableViewController.swift in Sources */,
+				E8DE31511F6F623E0009BABB /* MediaPickerController.swift in Sources */,
 				E8488CBC1E88815B00BC0E9E /* AudioPlaybackNode.swift in Sources */,
 				E8488CB71E887ADA00BC0E9E /* MixerViewController.swift in Sources */,
 				E8488CC01E88AA1E00BC0E9E /* AudioGraph.swift in Sources */,

@@ -24,10 +24,6 @@ class ViewController: UIViewController {
         audioGraph.attach() {
             // mixerViewController needs this, but it is late initialized...
             self.mixerViewController?.channelMixerNode = self.audioGraph.channelMixerNode!
-
-            self.playbackViewController!.selectSong(
-                audioFilePath: Bundle.main.bundlePath + "/cant_find_my_way_home.mp3"
-            )
         }
     }
 

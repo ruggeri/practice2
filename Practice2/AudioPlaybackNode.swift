@@ -26,6 +26,10 @@ class AudioPlaybackNode {
 
     // Start playing audio
     func play() {
+        if (audioFile == nil) {
+            return;
+        }
+
         audioPlayerNode.stop()
 
         audioPlayerNode.scheduleSegment(

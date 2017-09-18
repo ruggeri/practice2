@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -57,24 +57,6 @@
             </objects>
             <point key="canvasLocation" x="-980" y="-396.25187406296857"/>
         </scene>
-        <!--Songs Table View Controller-->
-        <scene sceneID="HnJ-N1-k4J">
-            <objects>
-                <tableViewController id="iOm-fF-nXZ" customClass="SongsTableViewController" customModule="Practice2" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="MlT-d1-THd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="dataSource" destination="iOm-fF-nXZ" id="Xjf-Y6-mEr"/>
-                            <outlet property="delegate" destination="iOm-fF-nXZ" id="9je-22-gtU"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OCh-as-r9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="905" y="-653"/>
-        </scene>
         <!--Playback View Controller-->
         <scene sceneID="t95-Ju-jkz">
             <objects>
@@ -123,7 +105,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Change Song"/>
                                 <connections>
-                                    <segue destination="iOm-fF-nXZ" kind="presentation" identifier="PresentSongsTable" id="iEA-w0-GaR"/>
+                                    <segue destination="kIQ-Fq-UfM" kind="presentation" identifier="PresentSongsTable" id="emM-7R-qZu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -136,6 +118,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lfi-25-Nuk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4" y="-622"/>
+        </scene>
+        <!--Media Picker Controller-->
+        <scene sceneID="ODy-gS-DhT">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="guP-Dp-5hl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="kIQ-Fq-UfM" customClass="MediaPickerController" customModule="Practice2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RWj-bT-eau"/>
+                        <viewControllerLayoutGuide type="bottom" id="dRc-NX-Tzp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gL1-6p-2uH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="778" y="-772"/>
         </scene>
         <!--Scrolling View Controller-->
         <scene sceneID="4ex-wc-xwX">
